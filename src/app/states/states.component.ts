@@ -47,8 +47,8 @@ export class StatesComponent implements OnInit {
 		analysis.mean = analysis.total/this.states.length;
 		analysis.variance = this.varianceService.twoPassPopulationVariance(dataPoints);
 		analysis.standardDeviation = this.varianceService.standardDeviation(dataPoints)
-		analysis.squashed = this.varianceService.squash(analysis.standardDeviation);
-		//analysis.zScoreTotal = this.varianceService.zScoreTotal(dataPoints);
+		analysis.dadsNaiveVarianceSquash = this.varianceService.dadsNaiveVarianceSquash(dataPoints);
+		analysis.dadsNaiveStandardDeviationSquash = this.varianceService.dadsNaiveStandardDeviationSquash(dataPoints);
 		_.each(analysis, (value, key) => {
 			arr.push({
 				key: key,

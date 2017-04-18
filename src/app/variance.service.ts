@@ -91,9 +91,20 @@ export class VarianceService {
 			)
 		);
 	}
-	squash(x){
-		return 1/(1 + Math.pow(Math.E, -1 * x) - x);
-		//f(x)=1/(1+e−x)
+	dadsNaiveVarianceSquash(list: any[]): number{
+		let variance = this.twoPassPopulationVariance(list);
+		let worstCase = this.twoPassPopulationVariance(this.maxVarianceCase(list));
+		let bestCase = this.twoPassPopulationVariance(this.minVarianceCase(list));
+		let range = worstCase - bestCase;
+		return range > 0 ? (variance - bestCase) / (worstCase - bestCase) : 0;
+	}
+
+	dadsNaiveStandardDeviationSquash(list: any[]): number{
+		let stdDev = this.standardDeviation(list);
+		let worstCase = this.standardDeviation(this.maxVarianceCase(list));
+		let bestCase = this.standardDeviation(this.minVarianceCase(list));
+		let range = worstCase - bestCase;
+		return range > 0 ? (stdDev - bestCase) / (worstCase - bestCase) : 0;
 	}
 
 
