@@ -26,6 +26,8 @@ ng serve --open
 ```
 The app now lives at [http://localhost:4200/](http://localhost:4200/)
 
+You can safely ignore the following...
+
 ----
 
 
