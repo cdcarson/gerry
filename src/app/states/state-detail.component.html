@@ -1,0 +1,23 @@
+
+
+
+	<div class="input-group input-group-sm">
+		<label [attr.for]="state.id + '-input'"
+			class="input-group-addon bg-primary text-white"
+			ngbTooltip="{{state.name}}">
+				 <span class="state-abbr">{{state.abbreviation}}</span>
+				 <span class="sr-only" [attr.id]="state.id + '-label'">
+					 {{state.name}} Population
+				</span>
+      	</label>
+		<input
+			[attr.id]="state.id + '-input'"
+	  	  	type="text"
+	  		class="form-control"
+	  		placeholder="Population"
+			[(ngModel)]="value"
+			(change)="onChange()"
+	  		[attr.aria-describedby]="state.id + '-toggleEdit'">
+
+	   </div>
+	   

@@ -1,0 +1,9 @@
+.input-group{
+	margin:0 0 6px 0 ;
+
+}
+.input-group span.state-abbr {
+	display: inline-block;
+	text-align: center;
+	width: 26px;
+}
