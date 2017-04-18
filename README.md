@@ -1,5 +1,34 @@
 # Gerry
 
+## Install
+
+At this point, the Angular CLI is required. Install it globally from NPM...
+
+```bash
+npm install -g @angular/cli
+```
+
+Clone the app an cd into the directory...
+
+```bash
+git clone git@github.com:cdcarson/gerry.git
+cd gerry
+```
+
+Install the app dependencies...
+```bash
+npm i
+```
+
+Serve the app locally...
+```
+ng serve --open
+```
+The app now lives at [http://localhost:4200/](http://localhost:4200/)
+
+----
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
 
 ## Development server
